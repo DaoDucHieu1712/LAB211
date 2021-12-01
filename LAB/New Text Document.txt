@@ -1,0 +1,84 @@
+public static int getChoice(String msg, String err, int min, int max ) {
+         int a = 0 ;
+         while (true) {            
+             try {
+                 System.out.println(msg);
+                 a = Integer.parseInt(sc.nextLine());
+                 if(a >= min && a <= max){
+                     break;
+                 }
+             } catch (Exception e) {
+                 System.out.println(err);
+             }
+        }
+        return a;
+    }
+    
+    public static int getInt(String str) {
+
+        int a = 0;
+        Scanner sc = new Scanner(System.in);
+
+        while (true) {
+            try {
+                System.out.println(str);
+                a = Integer.parseInt(sc.nextLine());
+
+                break;
+
+            } catch (Exception e) {
+                System.out.println("invalid !!!");
+            }
+        }
+        return a;
+    }
+    
+    public static String getString(String msg, String err) {
+        String str;
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            System.out.println(msg);
+            str = sc.nextLine();
+            if (!str.trim().isEmpty()) {
+                break;
+            } else {
+                System.out.println(err);
+            }
+        }
+        return str;
+    }
+
+    public static int getFloat(String msg, String err) {
+
+        float a = 0;
+        Scanner sc = new Scanner(System.in);
+
+        while (true) {
+            try {
+                System.out.println(msg);
+                a = Float.parseFloat(sc.nextLine());
+                break;
+
+            } catch (Exception e) {
+                System.out.println(err);
+            }
+        }
+        return (int) a;
+    }
+    
+    public static String getStringRegex(String msg, String err, String regex){
+        while (true) {            
+            try {
+                System.out.println(msg);
+                String str = sc.nextLine();
+                if(str.matches(regex)){
+                    return str;
+                }
+            } catch (Exception e) {
+                System.out.println("IOException");
+            }
+            System.out.println(err);
+        }
+    }
+
+
