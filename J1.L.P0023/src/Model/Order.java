@@ -41,22 +41,5 @@ public class Order {
         this.OrderList = OrderList;
     }
 
-    public void updateOrder(int quantity, Fruit f, int id) {
-        boolean check = false;
-        // oder trung 
-        for (Fruit od : OrderList) {
-            if (id == od.getId()) {
-                check = true;
-                od.setQuantity(od.getQuantity() + quantity);// set quantity order
-                f.setQuantity(f.getQuantity() - quantity); //set quantity fruit
-                break;
-            }
-        }
-       
-        if(check == false){
-            Fruit od = new Fruit(f.getId(), f.getName(), f.getPrice(), quantity, f.getOrigin());
-            OrderList.add(od);
-            f.setQuantity(f.getQuantity() - quantity);
-        }
-    }
+    
 }
