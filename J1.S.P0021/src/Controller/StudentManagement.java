@@ -109,30 +109,7 @@ public class StudentManagement {
         return false;
     }
 
-    //add student by ID in arraylist
-    public ArrayList<Student> listStudentByID(String id) {
-        ArrayList<Student> listStudentByID = new ArrayList<>();
-        for (Student t : listStudent) {
-            if (t.getId().equalsIgnoreCase(id)) {
-                listStudentByID.add(t);
-            }
-        }
-        return listStudentByID;
-
-    }
-
-    // hien thi list Student va Update or Delete theo STT
-    public Student getStudentSearch(ArrayList<Student> list) {
-        int stt = 1;
-        System.out.printf("%-5s%-10s%-20s%-15s%-15s\n", "STT", "ID", "Name", "Semster", "Course");
-        for (Student t : list) {
-            System.out.printf("%-5s%-10s%-20s%-15s%-15s\n", stt, t.getId(),
-                    t.getName(), t.getSemeter(), t.getCourseName());
-            stt++;
-        }
-        int sttCheck = Validate.getChoice("Enter STT: ", "STT Invalid !", 1, list.size());
-        return list.get(sttCheck - 1);
-    }
+    
 
     //check Rp
     private boolean checkRP(ArrayList<Report> rpList, String name, String courseName, int total, String id) {
