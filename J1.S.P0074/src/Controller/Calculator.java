@@ -101,10 +101,10 @@ public class Calculator {
                 result[i][j] = 0;
             }
         }
-        for (int i = 0; i < row1; i++) {  // chạy từng phần tử trong hàng của matrix 1
-            for (int j = 0; j < col2; j++) { // chạy từng phần tử của trong cột của matrix 2
-                for (int k = 0; k < col1; k++) { // chạy từng phần tử trong cột của matrix 1
-                    result[i][j] += matrix1[i][k] * matrix2[k][j]; // tổng (từng phần tử trong hàng của m1 x từng phần tử trong cột của m2)
+        for (int i = 0; i < row1; i++) { 
+            for (int j = 0; j < col2; j++) { 
+                for (int k = 0; k < col1; k++) { 
+                    result[i][j] += matrix1[i][k] * matrix2[k][j]; // 
                 }
             }
         }
